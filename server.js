@@ -13,7 +13,7 @@ io.on('connection', function (socket) {
 		console.log ("message recieved: " + message.text)
 
 		socket.io
-		socket.broadcast.emit("message",message);
+		io.emit("message",message);
 	});
 
 	socket.emit("message", {
